@@ -6,6 +6,7 @@ import { JsDocRulesMetaConfig } from '@/meta/strategy/jsdoc.ts'
 import { JsxRulesMetaConfig } from '@/meta/strategy/jsx_a11y.ts'
 import { NextjsRulesMetaConfig } from '@/meta/strategy/nextjs.ts'
 import { OXCRulesMetaConfig } from '@/meta/strategy/oxc.ts'
+import { PromiseRulesMetaConfig } from '@/meta/strategy/promise.ts'
 import { ReactRulesMetaConfig } from '@/meta/strategy/react.ts'
 import { ReactPrefRulesMetaConfig } from '@/meta/strategy/react_pref.ts'
 import { TypeScriptRulesMetaConfig } from '@/meta/strategy/typescript.ts'
@@ -25,7 +26,7 @@ const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     jsx_a11y: JsxRulesMetaConfig,
     nextjs: NextjsRulesMetaConfig,
     react_perf: ReactPrefRulesMetaConfig,
-    promise: EslintRulesMetaConfig,
+    promise: PromiseRulesMetaConfig,
     node: EslintRulesMetaConfig,
     vue: EslintRulesMetaConfig,
 }
