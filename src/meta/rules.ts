@@ -1,12 +1,13 @@
 import type { IOxlintRules, LintOptions, RulesMetaStrategy } from '@/types.ts'
 import { EslintRulesMetaConfig } from '@/meta/strategy/eslint.ts'
 import { OXCRulesMetaConfig } from '@/meta/strategy/oxc.ts'
+import { TypeScriptRulesMetaConfig } from '@/meta/strategy/typescript.ts'
 
 const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     eslint: EslintRulesMetaConfig,
     react: EslintRulesMetaConfig,
     unicorn: EslintRulesMetaConfig,
-    typescript: EslintRulesMetaConfig,
+    typescript: TypeScriptRulesMetaConfig,
     oxc: OXCRulesMetaConfig,
     import: EslintRulesMetaConfig,
     jsdoc: EslintRulesMetaConfig,

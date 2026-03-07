@@ -44,6 +44,7 @@
         "@lonewolfyx/tsconfig": "^0.0.6",
         "@types/json-schema": "^7.0.15",
         "@types/node": "^25.3.5",
+        "@typescript-eslint/eslint-plugin": "^8.56.1",
         "cheerio": "^1.2.0",
         "eslint": "^9.39.4",
         "giget": "^3.1.2",
