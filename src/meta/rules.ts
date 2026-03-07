@@ -1,12 +1,13 @@
 import type { IOxlintRules, LintOptions, RulesMetaStrategy } from '@/types.ts'
 import { EslintRulesMetaConfig } from '@/meta/strategy/eslint.ts'
+import { OXCRulesMetaConfig } from '@/meta/strategy/oxc.ts'
 
 const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     eslint: EslintRulesMetaConfig,
     react: EslintRulesMetaConfig,
     unicorn: EslintRulesMetaConfig,
     typescript: EslintRulesMetaConfig,
-    oxc: EslintRulesMetaConfig,
+    oxc: OXCRulesMetaConfig,
     import: EslintRulesMetaConfig,
     jsdoc: EslintRulesMetaConfig,
     jest: EslintRulesMetaConfig,
@@ -22,8 +23,8 @@ const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
 export class RulesMeta {
     private readonly ruleMetas = scopeRules
 
-    getRuleMeta(rule: IOxlintRules): any {
+    async getRuleMeta(rule: IOxlintRules) {
         const handler = this.ruleMetas[rule.scope]?.()
-        return handler.getRuleMeta(rule)
+        return await handler.getRuleMeta(rule)
     }
 }

@@ -26,5 +26,5 @@ export interface IOxlintRules {
 }
 
 export interface RulesMetaStrategy {
-    getRuleMeta: (rule: IOxlintRules) => void
+    getRuleMeta: (rule: IOxlintRules) => Promise<any>
 }

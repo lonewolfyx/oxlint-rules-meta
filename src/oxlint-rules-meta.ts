@@ -7,13 +7,16 @@ async function main() {
     const oxlintCommandResult = await x('oxlint', ['--rules', '-f', 'json'])
     const oxlintRules = JSON.parse(oxlintCommandResult.stdout) as IOxlintRules[]
 
+    const oxLintRulesMeta = new Map()
+
     // why? see https://oxc.rs/docs/guide/usage/linter/plugins.html#supported-plugins
     for (const rule of oxlintRules) {
         if (rule.scope !== 'oxc') {
             continue
         }
-        console.log(rulesMeta.getRuleMeta(rule))
+        oxLintRulesMeta.set(rule.value, await rulesMeta.getRuleMeta(rule))
     }
+    console.log(oxLintRulesMeta)
     // const eslintRules = await import('eslint/use-at-your-own-risk').then(r => r.default.builtinRules)
     // for (const [name, rule] of eslintRules.entries()) {
     //     console.log(name, JSON.stringify(rule.meta, null, 2))
