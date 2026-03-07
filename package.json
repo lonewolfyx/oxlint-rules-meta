@@ -48,6 +48,7 @@
         "oxlint": "^1.51.0",
         "picocolors": "^1.1.1",
         "simple-git-hooks": "^2.13.1",
+        "tinyexec": "^1.0.2",
         "tsdown": "^0.21.0",
         "tsdown-preset": "^1.0.3",
         "tsx": "^4.21.0",
