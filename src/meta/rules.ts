@@ -7,6 +7,7 @@ import { OXCRulesMetaConfig } from '@/meta/strategy/oxc.ts'
 import { ReactRulesMetaConfig } from '@/meta/strategy/react.ts'
 import { TypeScriptRulesMetaConfig } from '@/meta/strategy/typescript.ts'
 import { UnicornRulesMetaConfig } from '@/meta/strategy/unicorn.ts'
+import { VitestRulesMetaConfig } from '@/meta/strategy/vitest.ts'
 
 const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     eslint: EslintRulesMetaConfig,
@@ -17,7 +18,7 @@ const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     import: ImportRulesMetaConfig,
     jsdoc: JsDocRulesMetaConfig,
     jest: JestRulesMetaConfig,
-    vitest: EslintRulesMetaConfig,
+    vitest: VitestRulesMetaConfig,
     jsx_a11y: EslintRulesMetaConfig,
     nextjs: EslintRulesMetaConfig,
     react_perf: EslintRulesMetaConfig,
