@@ -40,6 +40,7 @@ export function OXCRulesMetaConfig(): RulesMetaStrategy {
                     docs: {
                         description,
                         url: rule.docs_url,
+                        category: rule.category,
                     },
                     fixable: rule.fix,
                     schema: [],
