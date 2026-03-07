@@ -35,7 +35,7 @@ export function OXCRulesMetaConfig(): RulesMetaStrategy {
                 meta: {
                     source: rule.scope,
                     category: rule.category,
-                    default: false,
+                    default: rule.default,
                     description,
                     docs: {
                         description,
