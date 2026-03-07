@@ -13,6 +13,7 @@ import { ReactPrefRulesMetaConfig } from '@/meta/strategy/react_pref.ts'
 import { TypeScriptRulesMetaConfig } from '@/meta/strategy/typescript.ts'
 import { UnicornRulesMetaConfig } from '@/meta/strategy/unicorn.ts'
 import { VitestRulesMetaConfig } from '@/meta/strategy/vitest.ts'
+import { VueRulesMetaConfig } from '@/meta/strategy/vue.ts'
 
 const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     eslint: EslintRulesMetaConfig,
@@ -29,7 +30,7 @@ const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     react_perf: ReactPrefRulesMetaConfig,
     promise: PromiseRulesMetaConfig,
     node: NodeRulesMetaConfig,
-    vue: EslintRulesMetaConfig,
+    vue: VueRulesMetaConfig,
 }
 
 export class RulesMeta {
