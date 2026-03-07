@@ -11,6 +11,7 @@ const config = antfu({
         'node/prefer-global/process': 'off',
         'ts/explicit-function-return-type': 'off',
         'regexp/no-unused-capturing-group': 'off',
+        'e18e/prefer-static-regex': 'off',
     },
     yaml: {
         overrides: {
