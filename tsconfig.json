@@ -5,5 +5,11 @@
         "@lonewolfyx/tsconfig/tsconfig.lib.json"
     ],
     "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        }
     }
 }
