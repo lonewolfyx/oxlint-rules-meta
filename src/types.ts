@@ -1,3 +1,5 @@
+import type { JSONSchema4 } from 'json-schema'
+
 export type LintOptions
     = 'eslint'
         | 'react'
@@ -25,6 +27,24 @@ export interface IOxlintRules {
     docs_url: string
 }
 
+export interface IRulesMetaDocs {
+    description?: string
+    url?: string
+    category?: string
+}
+
+export interface IRulesMeta {
+    name: string
+    meta: {
+        source: string
+        category: string
+        default: boolean
+        docs?: IRulesMetaDocs
+        fixable: string
+        schema: JSONSchema4 | JSONSchema4[] | []
+    }
+}
+
 export interface RulesMetaStrategy {
-    getRuleMeta: (rule: IOxlintRules) => Promise<any>
+    getRuleMeta: (rule: IOxlintRules) => Promise<IRulesMeta>
 }
