@@ -45,6 +45,7 @@
         "eslint": "^9.39.4",
         "giget": "^3.1.2",
         "lint-staged": "^16.3.2",
+        "oxlint": "^1.51.0",
         "oxnode": "^0.0.34",
         "picocolors": "^1.1.1",
         "simple-git-hooks": "^2.13.1",
