@@ -1,0 +1,64 @@
+{
+    "name": "oxlint-rules-meta",
+    "type": "module",
+    "version": "0.0.0",
+    "packageManager": "pnpm@10.30.3",
+    "description": "Metadata and JSON data for all Oxlint rules.",
+    "author": "lonewolfyx",
+    "license": "MIT",
+    "homepage": "https://github.com/lonewolfyx/oxlint-rules-meta#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lonewolfyx/oxlint-rules-meta.git"
+    },
+    "bugs": "https://github.com/lonewolfyx/oxlint-rules-meta/issues",
+    "keywords": [
+        "oxlint",
+        "rules",
+        "metadata",
+        "rules-config"
+    ],
+    "exports": {
+        ".": "./dist/index.mjs",
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "tsdown --watch",
+        "build": "tsdown",
+        "release": "npm publish",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "prepublishOnly": "pnpm build",
+        "prepare": "simple-git-hooks"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^7.7.0",
+        "@lonewolfyx/tsconfig": "^0.0.6",
+        "@types/node": "^25.3.5",
+        "eslint": "^9.39.4",
+        "lint-staged": "^16.3.2",
+        "oxnode": "^0.0.34",
+        "picocolors": "^1.1.1",
+        "simple-git-hooks": "^2.13.1",
+        "tsdown": "^0.21.0",
+        "tsdown-preset": "^1.0.3",
+        "typescript": "^5.9.3"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "npx lint-staged",
+        "commit-msg": "node scripts/verify-commit.js"
+    },
+    "lint-staged": {
+        "*": "eslint --fix"
+    }
+}
