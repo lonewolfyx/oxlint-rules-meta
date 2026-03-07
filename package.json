@@ -43,6 +43,7 @@
         "@antfu/eslint-config": "^7.7.0",
         "@lonewolfyx/tsconfig": "^0.0.6",
         "@next/eslint-plugin-next": "^16.1.6",
+        "@types/eslint-plugin-jsx-a11y": "^6.10.1",
         "@types/json-schema": "^7.0.15",
         "@types/node": "^25.3.5",
         "@typescript-eslint/eslint-plugin": "^8.56.1",
