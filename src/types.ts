@@ -35,13 +35,13 @@ export interface IRulesMetaDocs {
 
 export interface IRulesMeta {
     name: string
-    meta: {
-        source: string
-        category: string
-        default: boolean
+    meta?: {
+        source?: string
+        category?: string
+        default?: boolean
         docs?: IRulesMetaDocs
-        fixable: string
-        schema: JSONSchema4 | JSONSchema4[] | []
+        fixable?: string
+        schema?: JSONSchema4 | JSONSchema4[] | []
     }
 }
 
