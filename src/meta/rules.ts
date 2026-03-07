@@ -5,6 +5,7 @@ import { JestRulesMetaConfig } from '@/meta/strategy/jest.ts'
 import { JsDocRulesMetaConfig } from '@/meta/strategy/jsdoc.ts'
 import { JsxRulesMetaConfig } from '@/meta/strategy/jsx_a11y.ts'
 import { NextjsRulesMetaConfig } from '@/meta/strategy/nextjs.ts'
+import { NodeRulesMetaConfig } from '@/meta/strategy/node.ts'
 import { OXCRulesMetaConfig } from '@/meta/strategy/oxc.ts'
 import { PromiseRulesMetaConfig } from '@/meta/strategy/promise.ts'
 import { ReactRulesMetaConfig } from '@/meta/strategy/react.ts'
@@ -27,7 +28,7 @@ const scopeRules: Record<LintOptions, () => RulesMetaStrategy> = {
     nextjs: NextjsRulesMetaConfig,
     react_perf: ReactPrefRulesMetaConfig,
     promise: PromiseRulesMetaConfig,
-    node: EslintRulesMetaConfig,
+    node: NodeRulesMetaConfig,
     vue: EslintRulesMetaConfig,
 }
 
