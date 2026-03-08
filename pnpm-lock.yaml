@@ -71,6 +71,9 @@ importers:
       eslint-plugin-vue:
         specifier: ^10.8.0
         version: 10.8.0(@stylistic/eslint-plugin@5.10.0(eslint@9.39.4(jiti@2.6.1)))(@typescript-eslint/parser@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@9.39.4(jiti@2.6.1)))
+      genson-js:
+        specifier: ^0.0.8
+        version: 0.0.8
       giget:
         specifier: ^3.1.2
         version: 3.1.2
@@ -1806,6 +1809,9 @@ packages:
   generator-function@2.0.1:
     resolution: {integrity: sha512-SFdFmIJi+ybC0vjlHN0ZGVGHc3lgE0DxPAT0djjVg+kjOnSqclqmj0KQ7ykTOLP6YxoqOvuAODGdcHJn+43q3g==}
     engines: {node: '>= 0.4'}
+
+  genson-js@0.0.8:
+    resolution: {integrity: sha512-4NUusDTwF+lzYh72uKV+Uvpky9iPO+YDIMpGImA5pbHfLV9HwgRCA4hYjGu78V4J4Cx2IZRTFfRERn9aUs74mw==}
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -4856,6 +4862,8 @@ snapshots:
   functions-have-names@1.2.3: {}
 
   generator-function@2.0.1: {}
+
+  genson-js@0.0.8: {}
 
   gensync@1.0.0-beta.2: {}
 

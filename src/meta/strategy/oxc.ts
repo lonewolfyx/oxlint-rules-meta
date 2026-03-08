@@ -1,15 +1,10 @@
 import type { IOxlintRules, RulesMetaStrategy } from '@/types.ts'
-import { readFile } from 'node:fs/promises'
-import { join, resolve } from 'node:path'
 import { load } from 'cheerio'
+import { createSchema } from 'genson-js'
 import { marked } from 'marked'
-import { OXC_WEBSITE_PATH } from '@/path.ts'
+import { OxcLintDocParse } from '@/meta/prase/oxc.lint.parse.ts'
+import { getRuleMarkDownContent } from '@/utils.ts'
 
-async function getRuleMarkDownContent(rule: IOxlintRules) {
-    const RULES_GLOB_DIR = join('..', 'oxc-project-website', 'src', 'docs', 'guide', 'usage', 'linter', 'rules')
-
-    return await readFile(resolve(OXC_WEBSITE_PATH, `${RULES_GLOB_DIR}/${rule.scope}/${rule.value}.md`), 'utf-8')
-}
 async function getRuleDescription(rule: IOxlintRules): Promise<string> {
     const mdContent = await getRuleMarkDownContent(rule)
     const html = await marked(mdContent)
@@ -26,6 +21,7 @@ async function getRuleDescription(rule: IOxlintRules): Promise<string> {
 }
 
 export function OXCRulesMetaConfig(): RulesMetaStrategy {
+    const oxLintDocParse = new OxcLintDocParse()
     return {
         async getRuleMeta(rule: IOxlintRules) {
             const description = await getRuleDescription(rule)
@@ -43,7 +39,7 @@ export function OXCRulesMetaConfig(): RulesMetaStrategy {
                         category: rule.category,
                     },
                     fixable: rule.fix,
-                    schema: [],
+                    schema: [createSchema(await oxLintDocParse.parse(rule))],
                 },
             }
         },
