@@ -27,8 +27,7 @@
         "dist"
     ],
     "scripts": {
-        "dev:meta": "tsx watch ./src/oxlint-rules-meta.ts",
-        "dev": "tsdown --watch",
+        "dev": "tsx watch ./src/oxlint-rules-meta.ts",
         "build": "tsdown",
         "release": "npm publish",
         "lint": "eslint",
