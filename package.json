@@ -28,6 +28,7 @@
     ],
     "scripts": {
         "dev": "tsx watch ./src/oxlint-rules-meta.ts",
+        "dev:build": "tsdown --watch",
         "build": "tsdown",
         "release": "npm publish",
         "lint": "eslint",
