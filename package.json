@@ -1,7 +1,7 @@
 {
     "name": "oxlint-rules-meta",
     "type": "module",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "packageManager": "pnpm@10.30.3",
     "description": "Metadata and JSON data for all Oxlint rules.",
     "author": "lonewolfyx",
