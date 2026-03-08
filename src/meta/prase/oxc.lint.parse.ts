@@ -1,5 +1,6 @@
 import type { Token, Tokens } from 'marked'
 import type { IOxlintRules } from '@/types.ts'
+import { createSchema } from 'genson-js/dist'
 import { marked } from 'marked'
 import { getRuleMarkDownContent, toConfigObject } from '@/utils.ts'
 
@@ -12,8 +13,7 @@ export class OxcLintDocParse {
             return []
         }
 
-        console.log(JSON.stringify(mdcAST, null, 2))
-        return toConfigObject(this.parseUseConfiguration(mdcAST))
+        return createSchema(toConfigObject(this.parseUseConfiguration(mdcAST)))
     }
 
     private extractConfigurationSection(tokens: Token[]): Token[] {
@@ -73,8 +73,6 @@ export class OxcLintDocParse {
             if (node.type !== 'paragraph')
                 continue
 
-            // console.log(currentOption)
-            // console.log(node.type, node.text)
             const text = node.text.trim()
             if (text.startsWith('default:')) {
                 const codespan = node.tokens?.find(token => token.type === 'codespan') as unknown as Tokens.Codespan
@@ -82,7 +80,6 @@ export class OxcLintDocParse {
             }
         }
 
-        console.log(currentOption)
         if (currentOption) {
             options.push(currentOption)
         }

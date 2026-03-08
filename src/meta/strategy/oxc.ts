@@ -1,6 +1,5 @@
 import type { IOxlintRules, RulesMetaStrategy } from '@/types.ts'
 import { load } from 'cheerio'
-import { createSchema } from 'genson-js'
 import { marked } from 'marked'
 import { OxcLintDocParse } from '@/meta/prase/oxc.lint.parse.ts'
 import { getRuleMarkDownContent } from '@/utils.ts'
@@ -39,7 +38,7 @@ export function OXCRulesMetaConfig(): RulesMetaStrategy {
                         category: rule.category,
                     },
                     fixable: rule.fix,
-                    schema: [createSchema(await oxLintDocParse.parse(rule))],
+                    schema: await oxLintDocParse.parse(rule),
                 },
             }
         },
