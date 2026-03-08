@@ -4,3 +4,9 @@ export async function interopDefault<T>(m: Awaitable<T>): Promise<T extends { de
     const resolved = await m
     return (resolved as any).default || resolved
 }
+
+export function capitalizeFirstLetter(str: string) {
+    if (!str)
+        return ''
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
