@@ -58,7 +58,6 @@ export class OxcLintDocParse {
 
         for (const node of ast) {
             if (node.type === 'heading' && node.depth === 3) {
-                // // 保存当前一个 options，继续处理后续的 heading depth 为 3
                 // if (currentOption) {
                 //     options.push(currentOption)
                 // }
