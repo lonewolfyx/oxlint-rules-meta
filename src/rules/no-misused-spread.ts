@@ -1,0 +1,133 @@
+export default {
+    name: 'no-misused-spread',
+    meta: {
+        source: 'typescript',
+        category: 'correctness',
+        default: true,
+        docs: {
+            description: 'Disallow using the spread operator when it might cause unexpected behavior',
+            url: 'https://oxc.rs/docs/guide/usage/linter/rules/typescript/no-misused-spread.html',
+            category: 'correctness',
+        },
+        fixable: 'fixable_suggestion',
+        schema: [
+            {
+                type: 'object',
+                additionalProperties: false,
+                properties: {
+                    allow: {
+                        items: {
+                            oneOf: [
+                                {
+                                    type: 'string',
+                                },
+                                {
+                                    additionalProperties: false,
+                                    properties: {
+                                        from: {
+                                            enum: [
+                                                'file',
+                                            ],
+                                            type: 'string',
+                                        },
+                                        name: {
+                                            oneOf: [
+                                                {
+                                                    type: 'string',
+                                                },
+                                                {
+                                                    items: {
+                                                        type: 'string',
+                                                    },
+                                                    minItems: 1,
+                                                    type: 'array',
+                                                    uniqueItems: true,
+                                                },
+                                            ],
+                                        },
+                                        path: {
+                                            type: 'string',
+                                        },
+                                    },
+                                    required: [
+                                        'from',
+                                        'name',
+                                    ],
+                                    type: 'object',
+                                },
+                                {
+                                    additionalProperties: false,
+                                    properties: {
+                                        from: {
+                                            enum: [
+                                                'lib',
+                                            ],
+                                            type: 'string',
+                                        },
+                                        name: {
+                                            oneOf: [
+                                                {
+                                                    type: 'string',
+                                                },
+                                                {
+                                                    items: {
+                                                        type: 'string',
+                                                    },
+                                                    minItems: 1,
+                                                    type: 'array',
+                                                    uniqueItems: true,
+                                                },
+                                            ],
+                                        },
+                                    },
+                                    required: [
+                                        'from',
+                                        'name',
+                                    ],
+                                    type: 'object',
+                                },
+                                {
+                                    additionalProperties: false,
+                                    properties: {
+                                        from: {
+                                            enum: [
+                                                'package',
+                                            ],
+                                            type: 'string',
+                                        },
+                                        name: {
+                                            oneOf: [
+                                                {
+                                                    type: 'string',
+                                                },
+                                                {
+                                                    items: {
+                                                        type: 'string',
+                                                    },
+                                                    minItems: 1,
+                                                    type: 'array',
+                                                    uniqueItems: true,
+                                                },
+                                            ],
+                                        },
+                                        package: {
+                                            type: 'string',
+                                        },
+                                    },
+                                    required: [
+                                        'from',
+                                        'name',
+                                        'package',
+                                    ],
+                                    type: 'object',
+                                },
+                            ],
+                        },
+                        type: 'array',
+                        description: 'An array of type specifiers that are known to be safe to spread.',
+                    },
+                },
+            },
+        ],
+    },
+}

@@ -1,0 +1,68 @@
+export default {
+    name: 'no-restricted-types',
+    meta: {
+        source: 'typescript',
+        category: 'restriction',
+        default: false,
+        docs: {
+            description: 'Disallow certain types',
+            url: 'https://oxc.rs/docs/guide/usage/linter/rules/typescript/no-restricted-types.html',
+            category: 'restriction',
+        },
+        fixable: 'fixable_safe_fix_or_suggestion',
+        schema: [
+            {
+                type: 'object',
+                $defs: {
+                    banConfig: {
+                        oneOf: [
+                            {
+                                type: 'boolean',
+                                description: 'Bans the type with the default message.',
+                                enum: [
+                                    true,
+                                ],
+                            },
+                            {
+                                type: 'string',
+                                description: 'Bans the type with a custom message.',
+                            },
+                            {
+                                type: 'object',
+                                additionalProperties: false,
+                                description: 'Bans a type.',
+                                properties: {
+                                    fixWith: {
+                                        type: 'string',
+                                        description: 'Type to autofix replace with. Note that autofixers can be applied automatically - so you need to be careful with this option.',
+                                    },
+                                    message: {
+                                        type: 'string',
+                                        description: 'Custom error message.',
+                                    },
+                                    suggest: {
+                                        type: 'array',
+                                        description: 'Types to suggest replacing with.',
+                                        items: {
+                                            type: 'string',
+                                        },
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                },
+                additionalProperties: false,
+                properties: {
+                    types: {
+                        type: 'object',
+                        additionalProperties: {
+                            $ref: '#/items/0/$defs/banConfig',
+                        },
+                        description: 'An object whose keys are the types you want to ban, and the values are error messages.',
+                    },
+                },
+            },
+        ],
+    },
+}

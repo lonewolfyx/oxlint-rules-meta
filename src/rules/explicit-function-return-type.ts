@@ -1,0 +1,57 @@
+export default {
+    name: 'explicit-function-return-type',
+    meta: {
+        source: 'typescript',
+        category: 'restriction',
+        default: false,
+        docs: {
+            description: 'Require explicit return types on functions and class methods',
+            url: 'https://oxc.rs/docs/guide/usage/linter/rules/typescript/explicit-function-return-type.html',
+            category: 'restriction',
+        },
+        fixable: 'none',
+        schema: [
+            {
+                type: 'object',
+                additionalProperties: false,
+                properties: {
+                    allowConciseArrowFunctionExpressionsStartingWithVoid: {
+                        type: 'boolean',
+                        description: 'Whether to allow arrow functions that start with the `void` keyword.',
+                    },
+                    allowDirectConstAssertionInArrowFunctions: {
+                        type: 'boolean',
+                        description: 'Whether to ignore arrow functions immediately returning a `as const` value.',
+                    },
+                    allowedNames: {
+                        type: 'array',
+                        description: 'An array of function/method names that will not have their arguments or return values checked.',
+                        items: {
+                            type: 'string',
+                        },
+                    },
+                    allowExpressions: {
+                        type: 'boolean',
+                        description: 'Whether to ignore function expressions (functions which are not part of a declaration).',
+                    },
+                    allowFunctionsWithoutTypeParameters: {
+                        type: 'boolean',
+                        description: 'Whether to ignore functions that don\'t have generic type parameters.',
+                    },
+                    allowHigherOrderFunctions: {
+                        type: 'boolean',
+                        description: 'Whether to ignore functions immediately returning another function expression.',
+                    },
+                    allowIIFEs: {
+                        type: 'boolean',
+                        description: 'Whether to ignore immediately invoked function expressions (IIFEs).',
+                    },
+                    allowTypedFunctionExpressions: {
+                        type: 'boolean',
+                        description: 'Whether to ignore type annotations on the variable of function expressions.',
+                    },
+                },
+            },
+        ],
+    },
+}

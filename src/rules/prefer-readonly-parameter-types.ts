@@ -1,0 +1,145 @@
+export default {
+    name: 'prefer-readonly-parameter-types',
+    meta: {
+        source: 'typescript',
+        category: 'nursery',
+        default: false,
+        docs: {
+            description: 'Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs',
+            url: 'https://oxc.rs/docs/guide/usage/linter/rules/typescript/prefer-readonly-parameter-types.html',
+            category: 'nursery',
+        },
+        fixable: 'none',
+        schema: [
+            {
+                type: 'object',
+                additionalProperties: false,
+                properties: {
+                    allow: {
+                        items: {
+                            oneOf: [
+                                {
+                                    type: 'string',
+                                },
+                                {
+                                    additionalProperties: false,
+                                    properties: {
+                                        from: {
+                                            enum: [
+                                                'file',
+                                            ],
+                                            type: 'string',
+                                        },
+                                        name: {
+                                            oneOf: [
+                                                {
+                                                    type: 'string',
+                                                },
+                                                {
+                                                    items: {
+                                                        type: 'string',
+                                                    },
+                                                    minItems: 1,
+                                                    type: 'array',
+                                                    uniqueItems: true,
+                                                },
+                                            ],
+                                        },
+                                        path: {
+                                            type: 'string',
+                                        },
+                                    },
+                                    required: [
+                                        'from',
+                                        'name',
+                                    ],
+                                    type: 'object',
+                                },
+                                {
+                                    additionalProperties: false,
+                                    properties: {
+                                        from: {
+                                            enum: [
+                                                'lib',
+                                            ],
+                                            type: 'string',
+                                        },
+                                        name: {
+                                            oneOf: [
+                                                {
+                                                    type: 'string',
+                                                },
+                                                {
+                                                    items: {
+                                                        type: 'string',
+                                                    },
+                                                    minItems: 1,
+                                                    type: 'array',
+                                                    uniqueItems: true,
+                                                },
+                                            ],
+                                        },
+                                    },
+                                    required: [
+                                        'from',
+                                        'name',
+                                    ],
+                                    type: 'object',
+                                },
+                                {
+                                    additionalProperties: false,
+                                    properties: {
+                                        from: {
+                                            enum: [
+                                                'package',
+                                            ],
+                                            type: 'string',
+                                        },
+                                        name: {
+                                            oneOf: [
+                                                {
+                                                    type: 'string',
+                                                },
+                                                {
+                                                    items: {
+                                                        type: 'string',
+                                                    },
+                                                    minItems: 1,
+                                                    type: 'array',
+                                                    uniqueItems: true,
+                                                },
+                                            ],
+                                        },
+                                        package: {
+                                            type: 'string',
+                                        },
+                                    },
+                                    required: [
+                                        'from',
+                                        'name',
+                                        'package',
+                                    ],
+                                    type: 'object',
+                                },
+                            ],
+                        },
+                        type: 'array',
+                        description: 'An array of type specifiers to ignore.',
+                    },
+                    checkParameterProperties: {
+                        type: 'boolean',
+                        description: 'Whether to check class parameter properties.',
+                    },
+                    ignoreInferredTypes: {
+                        type: 'boolean',
+                        description: 'Whether to ignore parameters which don\'t explicitly specify a type.',
+                    },
+                    treatMethodsAsReadonly: {
+                        type: 'boolean',
+                        description: 'Whether to treat all mutable methods as though they are readonly.',
+                    },
+                },
+            },
+        ],
+    },
+}

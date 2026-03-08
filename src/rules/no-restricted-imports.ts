@@ -1,0 +1,239 @@
+export default {
+    name: 'no-restricted-imports',
+    meta: {
+        source: 'eslint',
+        category: 'restriction',
+        default: false,
+        docs: {
+            description: 'Disallow specified modules when loaded by `import`',
+            url: 'https://oxc.rs/docs/guide/usage/linter/rules/eslint/no-restricted-imports.html',
+            category: 'restriction',
+        },
+        fixable: 'none',
+        schema: {
+            anyOf: [
+                {
+                    type: 'array',
+                    items: {
+                        anyOf: [
+                            {
+                                type: 'string',
+                            },
+                            {
+                                type: 'object',
+                                properties: {
+                                    name: {
+                                        type: 'string',
+                                    },
+                                    message: {
+                                        type: 'string',
+                                        minLength: 1,
+                                    },
+                                    importNames: {
+                                        type: 'array',
+                                        items: {
+                                            type: 'string',
+                                        },
+                                    },
+                                    allowImportNames: {
+                                        type: 'array',
+                                        items: {
+                                            type: 'string',
+                                        },
+                                    },
+                                    allowTypeImports: {
+                                        type: 'boolean',
+                                        description: 'Whether to allow type-only imports for a path.',
+                                    },
+                                },
+                                additionalProperties: false,
+                                required: [
+                                    'name',
+                                ],
+                                not: {
+                                    required: [
+                                        'importNames',
+                                        'allowImportNames',
+                                    ],
+                                },
+                            },
+                        ],
+                    },
+                    uniqueItems: true,
+                },
+                {
+                    type: 'array',
+                    items: [
+                        {
+                            type: 'object',
+                            properties: {
+                                paths: {
+                                    type: 'array',
+                                    items: {
+                                        anyOf: [
+                                            {
+                                                type: 'string',
+                                            },
+                                            {
+                                                type: 'object',
+                                                properties: {
+                                                    name: {
+                                                        type: 'string',
+                                                    },
+                                                    message: {
+                                                        type: 'string',
+                                                        minLength: 1,
+                                                    },
+                                                    importNames: {
+                                                        type: 'array',
+                                                        items: {
+                                                            type: 'string',
+                                                        },
+                                                    },
+                                                    allowImportNames: {
+                                                        type: 'array',
+                                                        items: {
+                                                            type: 'string',
+                                                        },
+                                                    },
+                                                    allowTypeImports: {
+                                                        type: 'boolean',
+                                                        description: 'Whether to allow type-only imports for a path.',
+                                                    },
+                                                },
+                                                additionalProperties: false,
+                                                required: [
+                                                    'name',
+                                                ],
+                                                not: {
+                                                    required: [
+                                                        'importNames',
+                                                        'allowImportNames',
+                                                    ],
+                                                },
+                                            },
+                                        ],
+                                    },
+                                    uniqueItems: true,
+                                },
+                                patterns: {
+                                    anyOf: [
+                                        {
+                                            type: 'array',
+                                            items: {
+                                                type: 'string',
+                                            },
+                                            uniqueItems: true,
+                                        },
+                                        {
+                                            type: 'array',
+                                            items: {
+                                                type: 'object',
+                                                properties: {
+                                                    importNames: {
+                                                        type: 'array',
+                                                        items: {
+                                                            type: 'string',
+                                                        },
+                                                        minItems: 1,
+                                                        uniqueItems: true,
+                                                    },
+                                                    allowImportNames: {
+                                                        type: 'array',
+                                                        items: {
+                                                            type: 'string',
+                                                        },
+                                                        minItems: 1,
+                                                        uniqueItems: true,
+                                                    },
+                                                    group: {
+                                                        type: 'array',
+                                                        items: {
+                                                            type: 'string',
+                                                        },
+                                                        minItems: 1,
+                                                        uniqueItems: true,
+                                                    },
+                                                    regex: {
+                                                        type: 'string',
+                                                    },
+                                                    importNamePattern: {
+                                                        type: 'string',
+                                                    },
+                                                    allowImportNamePattern: {
+                                                        type: 'string',
+                                                    },
+                                                    message: {
+                                                        type: 'string',
+                                                        minLength: 1,
+                                                    },
+                                                    caseSensitive: {
+                                                        type: 'boolean',
+                                                    },
+                                                    allowTypeImports: {
+                                                        type: 'boolean',
+                                                        description: 'Whether to allow type-only imports for a pattern.',
+                                                    },
+                                                },
+                                                additionalProperties: false,
+                                                not: {
+                                                    anyOf: [
+                                                        {
+                                                            required: [
+                                                                'importNames',
+                                                                'allowImportNames',
+                                                            ],
+                                                        },
+                                                        {
+                                                            required: [
+                                                                'importNamePattern',
+                                                                'allowImportNamePattern',
+                                                            ],
+                                                        },
+                                                        {
+                                                            required: [
+                                                                'importNames',
+                                                                'allowImportNamePattern',
+                                                            ],
+                                                        },
+                                                        {
+                                                            required: [
+                                                                'importNamePattern',
+                                                                'allowImportNames',
+                                                            ],
+                                                        },
+                                                        {
+                                                            required: [
+                                                                'allowImportNames',
+                                                                'allowImportNamePattern',
+                                                            ],
+                                                        },
+                                                    ],
+                                                },
+                                                oneOf: [
+                                                    {
+                                                        required: [
+                                                            'group',
+                                                        ],
+                                                    },
+                                                    {
+                                                        required: [
+                                                            'regex',
+                                                        ],
+                                                    },
+                                                ],
+                                            },
+                                            uniqueItems: true,
+                                        },
+                                    ],
+                                },
+                            },
+                            additionalProperties: false,
+                        },
+                    ],
+                    additionalItems: false,
+                },
+            ],
+        },
+    },
+}
