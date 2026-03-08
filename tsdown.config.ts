@@ -1,8 +1,3 @@
-import { defineConfig } from 'tsdown'
+import { nodeLib } from 'tsdown-preset'
 
-export default defineConfig({
-    dts: true,
-    clean: true,
-    sourcemap: true,
-    unbundle: true,
-})
+export default nodeLib()
