@@ -58,9 +58,9 @@ export class OxcLintDocParse {
 
         for (const node of ast) {
             if (node.type === 'heading' && node.depth === 3) {
-                // if (currentOption) {
-                //     options.push(currentOption)
-                // }
+                if (currentOption) {
+                    options.push(currentOption)
+                }
 
                 currentOption = {
                     name: node.text.trim(),
