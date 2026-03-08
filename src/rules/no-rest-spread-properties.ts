@@ -14,11 +14,15 @@ export default {
         schema: {
             type: 'object',
             properties: {
+                objectRestMessage: {
+                    type: 'string',
+                },
                 objectSpreadMessage: {
                     type: 'string',
                 },
             },
             required: [
+                'objectRestMessage',
                 'objectSpreadMessage',
             ],
         },

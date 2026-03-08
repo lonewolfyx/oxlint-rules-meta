@@ -14,11 +14,15 @@ export default {
         schema: {
             type: 'object',
             properties: {
+                ignoreArgs: {
+                    type: 'boolean',
+                },
                 ignoreRereads: {
                     type: 'boolean',
                 },
             },
             required: [
+                'ignoreArgs',
                 'ignoreRereads',
             ],
         },
