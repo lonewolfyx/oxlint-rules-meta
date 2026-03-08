@@ -74,6 +74,9 @@ importers:
       giget:
         specifier: ^3.1.2
         version: 3.1.2
+      jiti:
+        specifier: ^2.6.1
+        version: 2.6.1
       json-schema:
         specifier: ^0.4.0
         version: 0.4.0
@@ -99,8 +102,8 @@ importers:
         specifier: ^0.21.0
         version: 0.21.0(synckit@0.11.12)(typescript@5.9.3)
       tsdown-preset:
-        specifier: ^1.0.3
-        version: 1.0.3(tsdown@0.21.0(synckit@0.11.12)(typescript@5.9.3))
+        specifier: ^1.0.5
+        version: 1.0.5(tsdown@0.21.0(synckit@0.11.12)(typescript@5.9.3))
       tsx:
         specifier: ^4.21.0
         version: 4.21.0
@@ -2829,10 +2832,10 @@ packages:
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
 
-  tsdown-preset@1.0.3:
-    resolution: {integrity: sha512-/lkX1vV6ciKHbifWhROGZBuEfrQdTPyEBV84HCzdPyyHMJ8BrwduT2lELCi++AzGca8RKyLF53YCYVhSnIukdg==}
+  tsdown-preset@1.0.5:
+    resolution: {integrity: sha512-+R2H+1sWWBlmK5QeHLdi7Y8WRndf1P9SsfodO2l1Sx5HJU0R4EwS4afE8N3JpvdISTDOnKT0Euh1hLNRSBrrIg==}
     peerDependencies:
-      tsdown: ^0.20.1
+      tsdown: ^0.21.0
 
   tsdown@0.21.0:
     resolution: {integrity: sha512-Sw/ehzVhjYLD7HVBPybJHDxpcaeyFjPcaDCME23o9O4fyuEl6ibYEdrnB8W8UchYAGoayKqzWQqx/oIp3jn/Vg==}
@@ -5119,8 +5122,7 @@ snapshots:
       has-symbols: 1.1.0
       set-function-name: 2.0.2
 
-  jiti@2.6.1:
-    optional: true
+  jiti@2.6.1: {}
 
   js-tokens@4.0.0: {}
 
@@ -6138,7 +6140,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tsdown-preset@1.0.3(tsdown@0.21.0(synckit@0.11.12)(typescript@5.9.3)):
+  tsdown-preset@1.0.5(tsdown@0.21.0(synckit@0.11.12)(typescript@5.9.3)):
     dependencies:
       tsdown: 0.21.0(synckit@0.11.12)(typescript@5.9.3)
 
