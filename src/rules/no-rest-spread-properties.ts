@@ -11,6 +11,16 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
-        schema: [],
+        schema: {
+            type: 'object',
+            properties: {
+                objectSpreadMessage: {
+                    type: 'string',
+                },
+            },
+            required: [
+                'objectSpreadMessage',
+            ],
+        },
     },
 }

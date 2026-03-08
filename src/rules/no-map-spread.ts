@@ -11,6 +11,16 @@ export default {
             category: 'perf',
         },
         fixable: 'conditional_safe_fix_or_suggestion',
-        schema: [],
+        schema: {
+            type: 'object',
+            properties: {
+                ignoreRereads: {
+                    type: 'boolean',
+                },
+            },
+            required: [
+                'ignoreRereads',
+            ],
+        },
     },
 }
