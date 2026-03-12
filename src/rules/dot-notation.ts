@@ -10,6 +10,15 @@ export default {
             category: 'nursery',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                allowIndexSignaturePropertyAccess: false,
+                allowKeywords: true,
+                allowPattern: '',
+                allowPrivateClassPropertyAccess: false,
+                allowProtectedClassPropertyAccess: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -11,6 +11,9 @@ export default {
             category: 'suspicious',
         },
         fixable: 'none',
+        defaultOptions: {
+            allowedNames: [],
+        },
         schema: {
             type: 'object',
             properties: {

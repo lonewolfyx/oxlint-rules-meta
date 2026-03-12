@@ -10,6 +10,11 @@ export default {
             category: 'suspicious',
         },
         fixable: 'conditional_fix',
+        defaultOptions: [
+            {
+                requireCatchParameter: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

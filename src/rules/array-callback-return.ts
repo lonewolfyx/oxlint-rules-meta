@@ -10,6 +10,13 @@ export default {
             category: 'pedantic',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                allowImplicit: false,
+                checkForEach: false,
+                allowVoid: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,11 @@ export default {
             category: 'style',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                functions: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

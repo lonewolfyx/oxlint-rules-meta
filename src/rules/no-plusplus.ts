@@ -10,6 +10,11 @@ export default {
             category: 'restriction',
         },
         fixable: 'conditional_suggestion',
+        defaultOptions: [
+            {
+                allowForLoopAfterthoughts: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

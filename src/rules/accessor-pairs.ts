@@ -10,6 +10,14 @@ export default {
             category: 'pedantic',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                enforceForTSTypes: false,
+                enforceForClassMembers: true,
+                getWithoutSet: false,
+                setWithoutGet: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

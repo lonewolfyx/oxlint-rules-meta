@@ -21,6 +21,7 @@ export function EslintRulesMetaConfig(): RulesMetaStrategy {
                         category: rule.category,
                     },
                     fixable: rule.fix,
+                    defaultOptions: rulesMeta?.meta?.defaultOptions || [],
                     schema: rulesMeta?.meta?.schema || [],
                 },
             }

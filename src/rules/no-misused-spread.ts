@@ -10,6 +10,7 @@ export default {
             category: 'correctness',
         },
         fixable: 'fixable_suggestion',
+        defaultOptions: [],
         schema: [
             {
                 type: 'object',

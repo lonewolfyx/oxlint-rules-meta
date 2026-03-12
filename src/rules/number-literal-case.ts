@@ -10,6 +10,11 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                hexadecimalValue: 'uppercase',
+            },
+        ],
         schema: [
             {
                 type: 'object',

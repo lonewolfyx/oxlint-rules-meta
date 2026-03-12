@@ -10,6 +10,12 @@ export default {
             category: 'restriction',
         },
         fixable: 'fixable_dangerous_fix',
+        defaultOptions: [
+            {
+                checkInfinity: false,
+                checkNaN: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

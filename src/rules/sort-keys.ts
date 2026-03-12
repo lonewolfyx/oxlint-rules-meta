@@ -10,6 +10,16 @@ export default {
             category: 'style',
         },
         fixable: 'conditional_fix',
+        defaultOptions: [
+            'asc',
+            {
+                allowLineSeparatedGroups: false,
+                caseSensitive: true,
+                ignoreComputedKeys: false,
+                minKeys: 2,
+                natural: false,
+            },
+        ],
         schema: [
             {
                 enum: [

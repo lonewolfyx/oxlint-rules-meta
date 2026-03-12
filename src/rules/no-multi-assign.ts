@@ -10,6 +10,11 @@ export default {
             category: 'style',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                ignoreNonDeclaration: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

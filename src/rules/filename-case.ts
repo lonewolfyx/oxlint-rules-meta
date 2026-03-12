@@ -10,6 +10,7 @@ export default {
             category: 'style',
         },
         fixable: 'none',
+        defaultOptions: [],
         schema: [
             {
                 oneOf: [

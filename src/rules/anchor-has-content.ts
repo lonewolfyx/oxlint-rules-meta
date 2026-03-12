@@ -10,6 +10,7 @@ export default {
             category: 'correctness',
         },
         fixable: 'conditional_suggestion',
+        defaultOptions: [],
         schema: [
             {
                 type: 'object',

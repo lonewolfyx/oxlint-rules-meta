@@ -10,6 +10,9 @@ export default {
             category: 'pedantic',
         },
         fixable: 'conditional_dangerous_fix',
+        defaultOptions: [
+            'always',
+        ],
         schema: [
             {
                 enum: [

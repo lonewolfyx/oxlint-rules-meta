@@ -10,6 +10,7 @@ export default {
             category: 'correctness',
         },
         fixable: 'none',
+        defaultOptions: [],
         schema: [
             {
                 enum: [

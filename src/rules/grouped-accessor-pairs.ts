@@ -10,6 +10,12 @@ export default {
             category: 'style',
         },
         fixable: 'pending',
+        defaultOptions: [
+            'anyOrder',
+            {
+                enforceForTSTypes: false,
+            },
+        ],
         schema: [
             {
                 enum: [

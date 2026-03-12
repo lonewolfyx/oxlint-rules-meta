@@ -10,6 +10,12 @@ export default {
             category: 'style',
         },
         fixable: 'conditional_fix',
+        defaultOptions: [
+            {
+                destructuring: 'any',
+                ignoreReadBeforeAssign: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

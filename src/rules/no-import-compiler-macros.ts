@@ -10,6 +10,7 @@ export default {
             category: 'restriction',
         },
         fixable: 'fixable_dangerous_fix',
+        defaultOptions: [],
         schema: [],
     },
 }

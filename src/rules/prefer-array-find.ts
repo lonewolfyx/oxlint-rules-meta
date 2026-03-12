@@ -10,6 +10,11 @@ export default {
             category: 'perf',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                checkFromLast: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,27 @@ export default {
             category: 'style',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                capIsNew: true,
+                capIsNewExceptions: [
+                    'Array',
+                    'Boolean',
+                    'Date',
+                    'Error',
+                    'Function',
+                    'Number',
+                    'Object',
+                    'RegExp',
+                    'String',
+                    'Symbol',
+                    'BigInt',
+                ],
+                newIsCap: true,
+                newIsCapExceptions: [],
+                properties: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

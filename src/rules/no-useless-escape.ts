@@ -10,6 +10,11 @@ export default {
             category: 'correctness',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                allowRegexCharacters: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

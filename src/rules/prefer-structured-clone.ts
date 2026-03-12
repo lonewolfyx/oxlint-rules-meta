@@ -10,6 +10,11 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_suggestion',
+        defaultOptions: [
+            {
+                functions: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

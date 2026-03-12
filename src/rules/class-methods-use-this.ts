@@ -10,6 +10,13 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                enforceForClassFields: true,
+                exceptMethods: [],
+                ignoreOverrideMethods: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

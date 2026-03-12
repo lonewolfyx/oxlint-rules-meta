@@ -11,6 +11,7 @@ export default {
             category: 'suspicious',
         },
         fixable: 'fixable_suggestion',
+        defaultOptions: [],
         schema: [],
     },
 }

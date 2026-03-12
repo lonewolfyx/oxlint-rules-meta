@@ -10,6 +10,13 @@ export default {
             category: 'correctness',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                ignoreDestructuring: false,
+                ignoreImport: false,
+                ignoreExport: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

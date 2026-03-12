@@ -10,6 +10,14 @@ export default {
             category: 'style',
         },
         fixable: 'pending',
+        defaultOptions: [
+            'expression',
+            {
+                allowArrowFunctions: false,
+                allowTypeAnnotation: false,
+                overrides: {},
+            },
+        ],
         schema: [
             {
                 enum: [

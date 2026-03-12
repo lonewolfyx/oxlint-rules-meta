@@ -10,6 +10,11 @@ export default {
             category: 'style',
         },
         fixable: 'conditional_dangerous_fix',
+        defaultOptions: [
+            {
+                checkStrictEquality: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

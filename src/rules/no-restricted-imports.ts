@@ -10,6 +10,7 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
+        defaultOptions: [],
         schema: {
             anyOf: [
                 {

@@ -11,6 +11,10 @@ export default {
             category: 'perf',
         },
         fixable: 'conditional_safe_fix_or_suggestion',
+        defaultOptions: {
+            ignoreArgs: true,
+            ignoreRereads: true,
+        },
         schema: {
             type: 'object',
             properties: {

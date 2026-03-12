@@ -10,6 +10,15 @@ export default {
             category: 'correctness',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                allowShortCircuit: false,
+                allowTernary: false,
+                allowTaggedTemplates: false,
+                enforceForJSX: false,
+                ignoreDirectives: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

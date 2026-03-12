@@ -10,6 +10,7 @@ export default {
             category: 'perf',
         },
         fixable: 'none',
+        defaultOptions: [],
         schema: [
             {
                 additionalProperties: false,

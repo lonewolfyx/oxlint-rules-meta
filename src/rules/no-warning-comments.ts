@@ -10,6 +10,16 @@ export default {
             category: 'pedantic',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                location: 'start',
+                terms: [
+                    'todo',
+                    'fixme',
+                    'xxx',
+                ],
+            },
+        ],
         schema: [
             {
                 type: 'object',

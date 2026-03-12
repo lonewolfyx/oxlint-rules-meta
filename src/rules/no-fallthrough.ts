@@ -10,6 +10,12 @@ export default {
             category: 'pedantic',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                allowEmptyCase: false,
+                reportUnusedFallthroughComment: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

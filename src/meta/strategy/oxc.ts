@@ -25,6 +25,7 @@ export function OXCRulesMetaConfig(): RulesMetaStrategy {
         async getRuleMeta(rule: IOxlintRules) {
             const description = await getRuleDescription(rule)
 
+            const parse = await oxLintDocParse.parse(rule)
             return {
                 name: rule.value,
                 meta: {
@@ -38,7 +39,8 @@ export function OXCRulesMetaConfig(): RulesMetaStrategy {
                         category: rule.category,
                     },
                     fixable: rule.fix,
-                    schema: await oxLintDocParse.parse(rule),
+                    defaultOptions: parse.options,
+                    schema: parse.schema,
                 },
             }
         },

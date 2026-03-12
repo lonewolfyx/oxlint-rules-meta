@@ -10,6 +10,12 @@ export default {
             category: 'style',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                allowLoop: false,
+                allowSwitch: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

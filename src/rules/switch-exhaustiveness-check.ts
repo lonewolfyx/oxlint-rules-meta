@@ -10,6 +10,7 @@ export default {
             category: 'pedantic',
         },
         fixable: 'conditional_suggestion',
+        defaultOptions: [],
         schema: [
             {
                 type: 'object',

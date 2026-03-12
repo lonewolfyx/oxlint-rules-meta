@@ -10,6 +10,12 @@ export default {
             category: 'pedantic',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                checkArguments: true,
+                checkArrowFunctionBody: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

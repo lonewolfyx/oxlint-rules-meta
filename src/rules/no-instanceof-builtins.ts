@@ -10,6 +10,14 @@ export default {
             category: 'suspicious',
         },
         fixable: 'conditional_suggestion',
+        defaultOptions: [
+            {
+                useErrorIsError: false,
+                strategy: 'loose',
+                include: [],
+                exclude: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

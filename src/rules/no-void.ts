@@ -10,6 +10,11 @@ export default {
             category: 'restriction',
         },
         fixable: 'fixable_suggestion',
+        defaultOptions: [
+            {
+                allowAsStatement: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

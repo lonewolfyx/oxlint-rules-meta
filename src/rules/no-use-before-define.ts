@@ -10,6 +10,17 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                classes: true,
+                functions: true,
+                variables: true,
+                allowNamedExports: false,
+                enums: true,
+                typedefs: true,
+                ignoreTypeReferences: true,
+            },
+        ],
         schema: [
             {
                 oneOf: [

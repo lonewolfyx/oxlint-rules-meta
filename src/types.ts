@@ -41,6 +41,7 @@ export interface IRulesMeta {
         default?: boolean
         docs?: IRulesMetaDocs
         fixable?: string
+        defaultOptions?: []
         schema?: JSONSchema4 | JSONSchema4[] | []
     }
 }

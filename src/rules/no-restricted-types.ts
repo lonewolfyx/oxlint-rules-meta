@@ -10,6 +10,7 @@ export default {
             category: 'restriction',
         },
         fixable: 'fixable_safe_fix_or_suggestion',
+        defaultOptions: [],
         schema: [
             {
                 type: 'object',

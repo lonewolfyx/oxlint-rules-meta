@@ -10,6 +10,7 @@ export default {
             category: 'style',
         },
         fixable: 'conditional_dangerous_fix',
+        defaultOptions: [],
         schema: [
             {
                 type: 'string',

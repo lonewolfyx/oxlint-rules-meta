@@ -11,6 +11,9 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
+        defaultOptions: {
+            message: '',
+        },
         schema: {
             type: 'object',
             properties: {

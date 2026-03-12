@@ -10,6 +10,12 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                name: 'error',
+                ignore: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

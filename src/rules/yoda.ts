@@ -10,6 +10,13 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            'never',
+            {
+                exceptRange: false,
+                onlyEquality: false,
+            },
+        ],
         schema: [
             {
                 enum: [

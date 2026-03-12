@@ -10,6 +10,27 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                onlyIfContainsSeparator: false,
+                binary: {
+                    minimumDigits: 0,
+                    groupLength: 4,
+                },
+                octal: {
+                    minimumDigits: 0,
+                    groupLength: 4,
+                },
+                hexadecimal: {
+                    minimumDigits: 0,
+                    groupLength: 2,
+                },
+                number: {
+                    minimumDigits: 5,
+                    groupLength: 3,
+                },
+            },
+        ],
         schema: [
             {
                 type: 'object',

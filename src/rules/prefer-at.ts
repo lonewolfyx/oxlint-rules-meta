@@ -10,6 +10,12 @@ export default {
             category: 'pedantic',
         },
         fixable: 'fixable_dangerous_fix',
+        defaultOptions: [
+            {
+                getLastElementFunctions: [],
+                checkAllIndexAccess: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

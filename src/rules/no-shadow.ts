@@ -10,6 +10,16 @@ export default {
             category: 'suspicious',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                allow: [],
+                builtinGlobals: false,
+                hoist: 'functions',
+                ignoreOnInitialization: false,
+                ignoreTypeValueShadow: true,
+                ignoreFunctionTypeParameterNameValueShadow: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

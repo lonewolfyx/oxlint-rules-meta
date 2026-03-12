@@ -10,6 +10,7 @@ export default {
             category: 'correctness',
         },
         fixable: 'conditional_dangerous_fix_or_suggestion',
+        defaultOptions: [],
         schema: [
             {
                 oneOf: [

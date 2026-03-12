@@ -10,6 +10,12 @@ export default {
             category: 'correctness',
         },
         fixable: 'conditional_fix',
+        defaultOptions: [
+            {
+                enforceForIndexOf: false,
+                enforceForSwitchCase: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

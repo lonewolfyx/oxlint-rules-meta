@@ -10,6 +10,9 @@ export default {
             category: 'restriction',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            'never',
+        ],
         schema: [
             {
                 enum: [

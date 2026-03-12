@@ -10,6 +10,11 @@ export default {
             category: 'correctness',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                allowIndirect: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

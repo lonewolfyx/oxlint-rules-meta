@@ -10,6 +10,11 @@ export default {
             category: 'pedantic',
         },
         fixable: 'conditional_dangerous_fix',
+        defaultOptions: [
+            {
+                functions: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,11 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                withDash: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,11 @@ export default {
             category: 'suspicious',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                exceptions: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

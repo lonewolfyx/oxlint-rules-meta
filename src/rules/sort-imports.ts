@@ -10,6 +10,20 @@ export default {
             category: 'style',
         },
         fixable: 'conditional_fix',
+        defaultOptions: [
+            {
+                allowSeparatedGroups: false,
+                ignoreCase: false,
+                ignoreDeclarationSort: false,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: [
+                    'none',
+                    'all',
+                    'multiple',
+                    'single',
+                ],
+            },
+        ],
         schema: [
             {
                 type: 'object',

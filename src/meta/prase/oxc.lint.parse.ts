@@ -5,15 +5,25 @@ import { marked } from 'marked'
 import { getRuleMarkDownContent, toConfigObject } from '@/utils.ts'
 
 export class OxcLintDocParse {
-    async parse(rule: IOxlintRules) {
+    async parse(rule: IOxlintRules): Promise<{
+        options: any
+        schema: any
+    }> {
         const markdown = await getRuleMarkDownContent(rule)
         const tokens = marked.lexer(markdown)
         const mdcAST = this.extractConfigurationSection(tokens)
         if (mdcAST.length === 0) {
-            return []
+            return {
+                options: [],
+                schema: [],
+            }
         }
 
-        return createSchema(toConfigObject(this.parseUseConfiguration(mdcAST)))
+        const options = toConfigObject(this.parseUseConfiguration(mdcAST))
+        return {
+            options,
+            schema: createSchema(options),
+        }
     }
 
     private extractConfigurationSection(tokens: Token[]): Token[] {

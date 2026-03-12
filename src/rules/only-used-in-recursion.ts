@@ -11,6 +11,7 @@ export default {
             category: 'correctness',
         },
         fixable: 'fixable_dangerous_fix',
+        defaultOptions: [],
         schema: [],
     },
 }

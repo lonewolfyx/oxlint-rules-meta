@@ -10,6 +10,12 @@ export default {
             category: 'pedantic',
         },
         fixable: 'none',
+        defaultOptions: [
+            'functions',
+            {
+                blockScopedFunctions: 'allow',
+            },
+        ],
         schema: [
             {
                 enum: [

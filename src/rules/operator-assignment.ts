@@ -10,6 +10,9 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_dangerous_fix',
+        defaultOptions: [
+            'always',
+        ],
         schema: [
             {
                 enum: [

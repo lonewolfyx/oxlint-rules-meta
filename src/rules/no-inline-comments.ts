@@ -10,6 +10,9 @@ export default {
             category: 'pedantic',
         },
         fixable: 'none',
+        defaultOptions: [
+            {},
+        ],
         schema: [
             {
                 type: 'object',

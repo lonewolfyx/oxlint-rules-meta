@@ -10,6 +10,15 @@ export default {
             category: 'correctness',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                skipComments: false,
+                skipJSXText: false,
+                skipRegExps: false,
+                skipStrings: true,
+                skipTemplates: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,11 @@ export default {
             category: 'correctness',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                checkLoops: 'allExceptWhileTrue',
+            },
+        ],
         schema: [
             {
                 type: 'object',

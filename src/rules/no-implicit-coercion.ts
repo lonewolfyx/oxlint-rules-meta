@@ -10,6 +10,15 @@ export default {
             category: 'style',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            {
+                allow: [],
+                boolean: true,
+                disallowTemplateShorthand: false,
+                number: true,
+                string: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

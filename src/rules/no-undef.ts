@@ -10,6 +10,11 @@ export default {
             category: 'nursery',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                typeof: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

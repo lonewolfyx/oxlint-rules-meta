@@ -10,6 +10,7 @@ export default {
             category: 'nursery',
         },
         fixable: 'fixable_dangerous_fix_or_suggestion',
+        defaultOptions: [],
         schema: [
             {
                 type: 'object',

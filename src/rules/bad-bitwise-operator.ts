@@ -11,6 +11,7 @@ export default {
             category: 'restriction',
         },
         fixable: 'fixable_suggestion',
+        defaultOptions: [],
         schema: [],
     },
 }

@@ -10,6 +10,9 @@ export default {
             category: 'pedantic',
         },
         fixable: 'fixable_fix',
+        defaultOptions: [
+            'uppercase',
+        ],
         schema: [
             {
                 enum: [

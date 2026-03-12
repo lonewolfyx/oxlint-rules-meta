@@ -10,6 +10,11 @@ export default {
             category: 'correctness',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                allowEscape: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

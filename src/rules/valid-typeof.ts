@@ -10,6 +10,11 @@ export default {
             category: 'correctness',
         },
         fixable: 'conditional_fix',
+        defaultOptions: [
+            {
+                requireStringLiterals: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

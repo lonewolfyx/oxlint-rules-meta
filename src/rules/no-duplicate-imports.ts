@@ -10,6 +10,12 @@ export default {
             category: 'style',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                includeExports: false,
+                allowSeparateTypeImports: false,
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,14 @@ export default {
             category: 'style',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                exceptionPatterns: [],
+                exceptions: [],
+                min: 2,
+                properties: 'always',
+            },
+        ],
         schema: [
             {
                 type: 'object',

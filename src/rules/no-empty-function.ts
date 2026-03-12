@@ -10,6 +10,11 @@ export default {
             category: 'restriction',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                allow: [],
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,11 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
+        defaultOptions: [
+            {
+                allowInParentheses: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

@@ -10,6 +10,9 @@ export default {
             category: 'style',
         },
         fixable: 'none',
+        defaultOptions: [
+            'except-parens',
+        ],
         schema: [
             {
                 enum: [

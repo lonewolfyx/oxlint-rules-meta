@@ -10,6 +10,11 @@ export default {
             category: 'suspicious',
         },
         fixable: 'pending',
+        defaultOptions: [
+            {
+                checkArrowFunctions: true,
+            },
+        ],
         schema: [
             {
                 type: 'object',

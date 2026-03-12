@@ -11,6 +11,9 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
+        defaultOptions: {
+            threshold: 100,
+        },
         schema: {
             type: 'object',
             properties: {

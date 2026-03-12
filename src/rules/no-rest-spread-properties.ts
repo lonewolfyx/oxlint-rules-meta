@@ -11,6 +11,10 @@ export default {
             category: 'restriction',
         },
         fixable: 'none',
+        defaultOptions: {
+            objectRestMessage: '',
+            objectSpreadMessage: '',
+        },
         schema: {
             type: 'object',
             properties: {
